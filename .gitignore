@@ -25,3 +25,4 @@ replay_pid*
 /build/tmp/compileJava/compileTransaction/stash-dir/Aurora.class.uniqueId0
 /.gradle
 /.gradle/
+.gradle/
