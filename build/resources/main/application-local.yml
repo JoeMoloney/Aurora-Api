@@ -2,3 +2,6 @@ server:
   port: 8082
   servlet:
     context-path: /api
+
+aurora-db:
+  base-url: http://127.0.0.1:4812
