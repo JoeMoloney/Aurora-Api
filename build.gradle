@@ -16,7 +16,7 @@ def reactorVersion = "3.5.2"
 
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter"
-    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-webflux"
     implementation "org.projectlombok:lombok:$lombokVersion"
     implementation "io.projectreactor:reactor-core:$reactorVersion"
 
