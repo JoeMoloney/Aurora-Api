@@ -12,11 +12,13 @@ repositories {
 }
 
 def lombokVersion = "1.18.30"
+def reactorVersion = "3.5.2"
 
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter"
     implementation "org.springframework.boot:spring-boot-starter-web"
     implementation "org.projectlombok:lombok:$lombokVersion"
+    implementation "io.projectreactor:reactor-core:$reactorVersion"
 
     annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
