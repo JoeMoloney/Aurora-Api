@@ -1,13 +1,12 @@
 package joe.aurora.controllers;
 
-import jakarta.servlet.http.HttpServletRequest;
+import joe.aurora.domains.user.User;
 import joe.aurora.services.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 @RestController
@@ -21,9 +20,22 @@ public class UserController {
         this.userService = userService;
     }
 
+    @PostMapping("/user/addUser")
+    public Mono<ResponseEntity<?>> addUser(@RequestBody User user, ServerHttpRequest serverHttpRequest) {
+        log.info("User Object: {}", user.toString());
+        return userService.addUser(user, serverHttpRequest)
+                .map(response -> ResponseEntity.ok().body(response));
+    }
+
+    @GetMapping("/user/getAllUsers")
+    public Mono<ResponseEntity<?>> getAllUsers(ServerHttpRequest serverHttpRequest) {
+        return userService.getAllUsers(serverHttpRequest)
+                .map(response -> ResponseEntity.ok().build());
+    }
+
     @GetMapping("/user/getUserById")
-    public Mono<ResponseEntity<?>> getUserById(@RequestParam Long userId, HttpServletRequest httpServletRequest) {
-        return userService.getUserById(userId, httpServletRequest)
+    public Mono<ResponseEntity<?>> getUserById(@RequestParam Long userId, ServerHttpRequest serverHttpRequest) {
+        return userService.getUserById(userId, serverHttpRequest)
                 .map(response -> ResponseEntity.ok().body(response));
     }
 }

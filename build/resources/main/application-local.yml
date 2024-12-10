@@ -5,3 +5,7 @@ server:
 
 aurora-db:
   base-url: http://127.0.0.1:4812
+
+logging:
+  level:
+    reactor: INFO
