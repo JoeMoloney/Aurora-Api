@@ -28,4 +28,4 @@ replay_pid*
 .gradle/
 /build/tmp/compileJava/compileTransaction/stash-dir/WebClientConfig.class.uniqueId0
 /build/
-.idea/*
+.idea/
