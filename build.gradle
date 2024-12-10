@@ -20,7 +20,7 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-webflux"
     implementation "org.projectlombok:lombok:$lombokVersion"
     implementation "io.projectreactor:reactor-core:$reactorVersion"
-    implementation "jakarta.servlet:jakarta.servlet-api:$jakartaVersion"
+//    implementation "jakarta.servlet:jakarta.servlet-api:$jakartaVersion"
 
     annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
