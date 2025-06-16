@@ -23,9 +23,8 @@
 hs_err_pid*
 replay_pid*
 /build/tmp/compileJava/compileTransaction/stash-dir/Aurora.class.uniqueId0
-/.gradle
 /.gradle/
 .gradle/
 /build/tmp/compileJava/compileTransaction/stash-dir/WebClientConfig.class.uniqueId0
 /build/
-.idea/
+/.idea/
