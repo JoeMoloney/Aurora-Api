@@ -1,17 +1,13 @@
 package joe.aurora.domains.user;
 
+import java.time.LocalDateTime;
+
 import lombok.Data;
 
 @Data
 public class User {
-    public String fName;
-    public String lName;
-
-    public String getUserAsString() {
-        return String.format("FirstName: %s, LastName: %s", this.fName, this.lName);
-    }
-
-    public String getFullName() {
-        return String.format("%s %s", this.fName, this.lName);
-    }
+    private Long id;
+    private String email;
+    private String passwordHash;
+    private LocalDateTime createdAt;
 }
