@@ -27,3 +27,6 @@ build/
 .idea/
 .vscode/
 bin/
+gradlew
+gradlew.bat
+gradle/wrapper/
