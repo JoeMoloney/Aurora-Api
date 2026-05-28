@@ -2,6 +2,8 @@ plugins {
     id "java"
     id "org.springframework.boot" version "3.2.6"
     id "io.spring.dependency-management" version "1.1.3"
+    id "io.gitlab.plunts.plantuml" version "2.4.1"
+    id "io.freefair.lombok" version "8.6"
 }
 
 group = "joe.aurora"
@@ -22,6 +24,7 @@ dependencies {
     implementation "io.projectreactor:reactor-core:$reactorVersion"
 //    implementation "jakarta.servlet:jakarta.servlet-api:$jakartaVersion"
 
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
     annotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
     testImplementation "org.springframework.boot:spring-boot-starter-test"
@@ -31,4 +34,13 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+classDiagrams {
+    diagram {
+        name("AuroraAPIStructure")
+        //Scan only the main package
+        include(packages().withName("joe.aurora"))
+        writeTo(file("build/reports/structure.poml"))
+    }
 }
