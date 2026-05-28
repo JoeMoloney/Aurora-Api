@@ -1,3 +1,5 @@
+package joe.aurora.domains.wallet;
+
 import java.math.BigDecimal;
 
 import lombok.Data;

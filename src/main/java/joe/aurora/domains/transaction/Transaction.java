@@ -1,3 +1,5 @@
+package joe.aurora.domains.transaction;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
