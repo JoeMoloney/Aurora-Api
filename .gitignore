@@ -28,3 +28,4 @@ replay_pid*
 /build/tmp/compileJava/compileTransaction/stash-dir/WebClientConfig.class.uniqueId0
 /build/
 /.idea/
+.vscode/settings.json
