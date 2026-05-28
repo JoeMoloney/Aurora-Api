@@ -22,11 +22,8 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
-/build/tmp/compileJava/compileTransaction/stash-dir/Aurora.class.uniqueId0
-/.gradle/
 .gradle/
-/build/tmp/compileJava/compileTransaction/stash-dir/WebClientConfig.class.uniqueId0
-/build/
-/.idea/
-.vscode/settings.json
+build/
+.idea/
+.vscode/
 bin/
