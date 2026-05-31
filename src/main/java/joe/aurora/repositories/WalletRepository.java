@@ -5,6 +5,6 @@ import java.util.Optional;
 import joe.aurora.domains.wallet.Wallet;
 
 public interface WalletRepository {
-    public Optional findById();
+    public Optional<Long> findById();
     public Wallet save();
 }
