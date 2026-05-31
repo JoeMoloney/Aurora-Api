@@ -2,6 +2,7 @@ package joe.aurora.domains.wallet;
 
 import java.math.BigDecimal;
 
+import joe.aurora.exceptions.InsufficientFundsException;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
@@ -15,10 +16,12 @@ public class Wallet {
     private Integer version;
 
     private void debit(BigDecimal amount) {
-        throw new UnsupportedOperationException("Feature Incomplete.");
+        this.balance = this.balance.add(amount);
     }
 
     private void credit(BigDecimal amount) {
-        throw new UnsupportedOperationException("Feature Incomplete.");
+        if(this.balance.compareTo(amount) < 0)
+            throw new InsufficientFundsException("Insufficient Funds");
+        this.balance = this.balance.subtract(amount);
     }
 }
