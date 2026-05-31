@@ -5,11 +5,12 @@ import java.math.BigDecimal;
 import joe.aurora.repositories.TransactionRepository;
 import joe.aurora.repositories.WalletRepository;
 import joe.aurora.services.WalletService;
+import joe.aurora.services.validators.TransferValidator;
 
 public class WalletServiceImpl implements WalletService {
     private WalletRepository walletRepository;
     private TransactionRepository transactionRepository;
-    // private TransferValidator transferValidator;
+    private TransferValidator transferValidator;
 
     public void executeTransfer(Long src, Long dest, BigDecimal amount) {
         throw new UnsupportedOperationException("Function not implemented");
