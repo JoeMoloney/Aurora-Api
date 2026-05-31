@@ -1,11 +1,12 @@
 package joe.aurora.repositories;
 
-import java.util.Optional;
-
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
 
 import joe.aurora.domains.user.User;
+import reactor.core.publisher.Mono;
 
 public interface UserRepository extends R2dbcRepository<User, Long> {
-    public Optional<User> findByEmail(String email);
+    public Mono<User> findByEmail(String email);
+    public Mono<User> findById(Long userId);
+    public Mono<User> save(User user);
 }
