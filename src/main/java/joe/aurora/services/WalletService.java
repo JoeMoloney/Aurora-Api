@@ -1,5 +1,7 @@
 package joe.aurora.services;
 
-public class WalletService {
-    
+import java.math.BigDecimal;
+
+public interface WalletService {
+    public void executeTransfer(Long src, Long dest, BigDecimal amount);
 }
