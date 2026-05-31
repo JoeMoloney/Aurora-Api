@@ -1,5 +1,8 @@
 package joe.aurora.services;
 
-public interface UserService {
+import joe.aurora.domains.user.User;
+import joe.aurora.dtos.UserDTO;
 
+public interface UserService {
+    public User createUser(UserDTO userDTO);
 }
