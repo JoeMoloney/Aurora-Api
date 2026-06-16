@@ -9,6 +9,7 @@ import joe.aurora.services.validators.TransferValidator;
 
 public class TransferValidatorImpls implements TransferValidator {
 
+    // BigDecimal.compareTo()
     // 0 = a == b
     // 1 = a > b
     // -1 = a < b
