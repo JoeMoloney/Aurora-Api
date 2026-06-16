@@ -12,5 +12,7 @@ import reactor.core.publisher.Mono;
 @RestController
 @Slf4j
 public class UserController {
+    private UserService userService;
+
     
 }

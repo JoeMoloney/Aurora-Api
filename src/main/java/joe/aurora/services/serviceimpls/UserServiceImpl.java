@@ -16,4 +16,8 @@ public class UserServiceImpl implements UserService {
     public User createUser(UserDTO userDTO) {
         throw new UnsupportedOperationException("Function not implemented");
     }
+
+    public User getUserById(Long userId) {
+        throw new UnsupportedOperationException("Function not implemented");
+    }
 }
