@@ -1,7 +1,0 @@
-server:
-  port: 2468
-  servlet:
-    context-path: /api
-
-aurora-db:
-  base-url: ${AURORA_DB_URL}
