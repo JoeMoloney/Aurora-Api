@@ -1,6 +1,11 @@
 # Aurora-Api
 Api layer to demonstrate Restful services
 
+for UML:
+plantuml
+graphviz
+
+
 Profiles:
 
     Default:
